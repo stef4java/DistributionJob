@@ -173,7 +173,7 @@ SchedulerX 是阿里巴巴自研的分布式任务调度平台（兼容开源 XX
 > 文档(唯品会): https://vipshop.github.io/Saturn/#/zh-cn/3.x/
 > github: https://github.com/vipshop/Saturn
 
-### `xxl-job`使用过程一些注意点 
+### 8. `xxl-job`使用过程一些注意点 
 1.测试`xxl-job`分片效果，可在evn 指定`-Dserver.port=xxxx`启动多个实例
 2.官方给出的`创建容器并运行xxl-job-admin的docker`命令，配置的MySQL需要配置，对应的`accessToken: 'default_token'`
 ```shell
