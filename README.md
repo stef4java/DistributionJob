@@ -175,6 +175,7 @@ SchedulerX 是阿里巴巴自研的分布式任务调度平台（兼容开源 XX
 
 ### 8. `xxl-job`使用过程一些注意点 
 1.测试`xxl-job`分片效果，可在evn 指定`-Dserver.port=xxxx`启动多个实例
+
 2.官方给出的`创建容器并运行xxl-job-admin的docker`命令，配置的MySQL需要配置，对应的`accessToken: 'default_token'`
 ```shell
 docker run -e PARAMS="--spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xxl_job?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai" -p 8080:8080 -v /tmp:/data/applogs --name xxl-job-admin  -d xuxueli/xxl-job-admin:{指定版本}
