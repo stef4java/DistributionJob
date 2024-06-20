@@ -1,0 +1,22 @@
+server:
+  port: 8081
+xxl:
+  job:
+    # 以docker部署的`xxl-job-admin`对应的`accessToken`， 生产环境中，建议在 docker run 命令指定
+    accessToken: 'default_token'
+    admin:
+      # xxl-job admin address
+      addresses: http://192.168.11.34:8080/xxl-job-admin
+    executor:
+      appname: xxl-job-executor-sample
+      logpath: /tmp/
+
+# 针对多网卡、容器内部署等情况，可借助 "spring-cloud-commons" 提供的 "InetUtils" 组件灵活定制注册IP；作者提供的`xxl-job-executor-samples`有说明
+spring:
+  cloud:
+    inetutils:
+      # 执行器注册时多网卡，首选网段
+      preferred-networks: '192.168.11.'
+
+
+
